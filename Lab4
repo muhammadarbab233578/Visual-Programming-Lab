@@ -1,0 +1,201 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Task 1: Initialize and Print 2D Array
+        Console.WriteLine("Task 1: Initialize and Print 2D Array");
+        int[,] array = new int[,]
+        {
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 }
+        };
+        Print2DArray(array);
+        Console.WriteLine();
+
+        // Task 2: Merger Method
+        Console.WriteLine("Task 2: Merger Method");
+        string[] words = { "hello", "and", "welcome", "to", "this", "demo!" };
+        string mergedString = Merger(words);
+        Console.WriteLine(mergedString);
+        Console.WriteLine();
+
+        // Task 3: Extract Words
+        Console.WriteLine("Task 3: Extract Words");
+        string input = "This is a sample sentence with words of various lengths.";
+        string[] extractedWords = ExtractWords(input);
+        Console.WriteLine(string.Join(", ", extractedWords));
+        Console.WriteLine();
+
+        // Task 4: Frequency of Responses
+        Console.WriteLine("Task 4: Frequency of Responses");
+        int[] responses = { 2, 3, 4, 2, 3, 3, 4, 5, 3, 2, 4, 3, 2, 4, 3, 5, 3, 4, 3, 2, 3, 2, 4, 3, 5, 4, 3, 2, 4, 3, 2, 5, 3, 4, 3, 4, 2, 3, 4, 5 };
+        FrequencyOfResponses(responses);
+        Console.WriteLine();
+
+        // Task 5: Decimal to Binary and Vice Versa
+        Console.WriteLine("Task 5: Decimal to Binary and Vice Versa");
+        int decimalNumber = 25;
+        string binaryNumber = DecimalToBinary(decimalNumber);
+        Console.WriteLine($"Decimal {decimalNumber} to Binary: {binaryNumber}");
+
+        string binaryInput = "11001";
+        int decimalResult = BinaryToDecimal(binaryInput);
+        Console.WriteLine($"Binary {binaryInput} to Decimal: {decimalResult}");
+        Console.WriteLine();
+
+        // Task 6: Multidimensional Rectangular Array
+        Console.WriteLine("Task 6: Multidimensional Rectangular Array");
+        int[,] testMarks = new int[5, 10];
+        Random rand = new Random();
+        for (int course = 0; course < 5; course++)
+        {
+            for (int student = 0; student < 10; student++)
+            {
+                testMarks[course, student] = rand.Next(0, 101); // Random marks between 0 and 100
+            }
+        }
+
+        Console.Write("Student ");
+        for (int student = 1; student <= 10; student++)
+        {
+            Console.Write(student + "\t");
+        }
+        Console.WriteLine();
+        Console.WriteLine(new string('-', 75));
+        for (int course = 0; course < 5; course++)
+        {
+            Console.Write($"Test {course + 1}: ");
+            for (int student = 0; student < 10; student++)
+            {
+                Console.Write(testMarks[course, student] + "\t");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+
+        // Task 7: Matrix Multiplication
+        Console.WriteLine("Task 7: Matrix Multiplication");
+        int[,] matrixA = new int[3, 3];
+        int[,] matrixB = new int[3, 3];
+
+        Console.WriteLine("Enter the elements of the first 3x3 matrix (Matrix A):");
+        InputMatrix(matrixA);
+
+        Console.WriteLine("Enter the elements of the second 3x3 matrix (Matrix B):");
+        InputMatrix(matrixB);
+
+        int[,] resultMatrix = MultiplyMatrices(matrixA, matrixB);
+        Console.WriteLine("The resultant matrix (A x B) is:");
+        PrintMatrix(resultMatrix);
+    }
+
+    static void Print2DArray(int[,] array)
+    {
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                Console.Write(array[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static string Merger(string[] array)
+    {
+        return string.Concat(array.Select(word => word + " ")).TrimEnd();
+    }
+
+    static string[] ExtractWords(string input)
+    {
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+        return input.Split(' ')
+                    .Where(word => word.Length >= 4 && word.Length <= 5 && word.Any(c => vowels.Contains(c)))
+                    .ToArray();
+    }
+
+    static void FrequencyOfResponses(int[] responses)
+    {
+        int[] frequency = new int[5];
+        foreach (int response in responses)
+        {
+            frequency[response - 1]++;
+        }
+        for (int i = 0; i < frequency.Length; i++)
+        {
+            Console.WriteLine($"Response {i + 1} given by: {frequency[i]} people");
+        }
+    }
+
+    static string DecimalToBinary(int decimalNumber)
+    {
+        if (decimalNumber == 0) return "0";
+        string binary = string.Empty;
+        while (decimalNumber > 0)
+        {
+            binary = (decimalNumber % 2) + binary;
+            decimalNumber /= 2;
+        }
+        return binary;
+    }
+
+    static int BinaryToDecimal(string binaryNumber)
+    {
+        int decimalValue = 0;
+        int baseValue = 1;
+        for (int i = binaryNumber.Length - 1; i >= 0; i--)
+        {
+            if (binaryNumber[i] == '1')
+            {
+                decimalValue += baseValue;
+            }
+            baseValue *= 2;
+        }
+        return decimalValue;
+    }
+
+    static void InputMatrix(int[,] matrix)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write($"Element [{i},{j}]: ");
+                matrix[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+    }
+
+    static int[,] MultiplyMatrices(int[,] matrixA, int[,] matrixB)
+    {
+        int[,] resultMatrix = new int[3, 3];
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                resultMatrix[i, j] = 0;
+                for (int k = 0; k < 3; k++)
+                {
+                    resultMatrix[i, j] += matrixA[i, k] * matrixB[k, j];
+                }
+            }
+        }
+        return resultMatrix;
+    }
+
+    static void PrintMatrix(int[,] matrix)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write(matrix[i, j] + "\t");
+            }
+            Console.WriteLine();
+        }
+    }
+}
