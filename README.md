@@ -1,3 +1,3 @@
 # Visual-Programming-Lab
 <br>
-Visual Programming Lab Task and Projects
+This repository for Visual Programming programs and Projects.
