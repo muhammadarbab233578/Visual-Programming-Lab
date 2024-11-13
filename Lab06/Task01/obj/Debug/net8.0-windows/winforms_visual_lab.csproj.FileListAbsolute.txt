@@ -1,0 +1,16 @@
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.Form1.resources
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.csproj.GenerateResource.cache
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.AssemblyInfoInputs.cache
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.AssemblyInfo.cs
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.csproj.CoreCompileInputs.cache
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\bin\Debug\net8.0-windows\winforms_visual_lab.exe
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\bin\Debug\net8.0-windows\winforms_visual_lab.deps.json
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\bin\Debug\net8.0-windows\winforms_visual_lab.runtimeconfig.json
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\bin\Debug\net8.0-windows\winforms_visual_lab.dll
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\bin\Debug\net8.0-windows\winforms_visual_lab.pdb
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.dll
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\refint\winforms_visual_lab.dll
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.pdb
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\winforms_visual_lab.genruntimeconfig.cache
+C:\Users\MASHHOOD FARQALEET\source\repos\winforms_visual_lab\obj\Debug\net8.0-windows\ref\winforms_visual_lab.dll
